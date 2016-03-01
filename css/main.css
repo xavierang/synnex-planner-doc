@@ -151,13 +151,42 @@ header {
 }
 
 #welcome{
-    margin-top:25%;
+    width:40%;
+    height:100vh;
+    margin-left:5vh;
+    margin-top:60vh;
 }
 
-#about-me{
+#about-me .left{
+    display:inline-block;
+    width:47.5%;
 }
 
-#portfolio{
+#about-me .left img{
+    max-width:45%;
+    height:auto;
+}
+
+#about-me .right{
+    display:inline-block;
+    margin-left:4%;
+    width:47.5%;
+}
+
+#about-me .right img{
+    max-width:100%;
+    height:auto;
+}
+
+#portfolio {
+}
+
+#portfolio img{
+    max-width:100%;
+    height:auto;
+}
+
+#project{
 }
 
 
