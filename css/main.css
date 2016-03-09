@@ -101,106 +101,124 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body { 
-    margin:0 auto;
-    font-size:16px;
-    background-image:url(../img/coverphoto.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
+
+html{
+    /*font-size:16px;
+    background-image: url("../img/synnex-bg.jpg");
+    background-size: cover;
     background-attachment: fixed;
-    background-position: center center;
-} 
-
-main{
-    color:#ffffff;
-    position:relative;
-    top:5%;
-    left:5%; 
-    width:70%;
+    background-repeat: no-repeat;
+    background-position: center center;*/
 }
 
-header {
-    position:fixed;
-    top:5%;
-    right:5%;
-    border:1px solid #ffffff;
-    width:20%;
-    padding:2rem;
-    background-color:rgba(0,0,0,0.3);
+body{
+    max-width:960px;
+    margin:0 auto;
 }
 
-.navbar h1{
-    text-align:center;
-    padding:1rem;
-    color:#ffffff;
-    border:1px solid #ffffff;
-}
+ul { padding:0; }
 
-.navbar ul{
-    padding:0;
-    text-align:center;
+li {
     list-style-type: none;
+    text-align: center;
 }
 
-.navbar li{
+a { text-decoration: none; }
+
+/*
+ * Section: Header
+ */
+
+#sidebar-nav {
+    position:fixed;
+    height:90vh;
+    left:5vh;
+    top:5vh;
+    padding:2em 1em 2em 1em;
+    border:1px solid #ffffff;
+    background-color:rgba(0,0,0,0.5);
 }
 
-.navbar a{
+#sidebar-nav img[alt="synnex logo"]{
+    padding:1em;
+    max-width:100%;
+    height:auto;
+    border:1px solid #ffffff;
+}
+
+#sidebar-nav p{
+    text-align: center;
+    font-size:0.6rem;
     color:#ffffff;
-    text-decoration: none;
 }
 
-#welcome{
-    width:40%;
+#sidebar-nav ul{
+    margin-top:15vh;
+    margin-bottom:15vh;
+}
+
+#sidebar-nav a{
+    font-size:1rem;
+    color:#ffffff;
+}
+
+#sidebar-nav a:hover{
+    color:red;
+}
+
+.social-media-icons{
+    text-align: center;
+}
+
+.social-media-icons img{
+    width:20%;
+    height:auto;
+    background-color:white;
+    padding:0;
+    border:1px solid #ffffff;
+    border-radius:5em;
+}
+
+.social-media-icons img:hover{
+    background-color:red;
+}
+
+/*
+ * Section: Introduction
+ */
+
+#introduction{
     height:100vh;
-    margin-left:5vh;
-    margin-top:60vh;
+    padding-top:5vh;
 }
 
-#about-me .left{
+.intro-syd{
+    border-left:1px solid #000000;
+    padding-left:1em;
+    font-size:0.9em;
+}
+
+/*
+ * Section: About Us
+ */
+
+
+/*
+ * Section: Team Members
+ */
+ #team-nav li{
     display:inline-block;
-    width:47.5%;
-}
+    padding-left:2em;
+    float:right;
+ }
 
-#about-me .left img{
-    max-width:45%;
-    height:auto;
-}
-
-#about-me .right{
-    display:inline-block;
-    margin-left:4%;
-    width:47.5%;
-}
-
-#about-me .right img{
+ .members {
     max-width:100%;
     height:auto;
-}
-
-#portfolio {
-}
-
-#portfolio img{
-    max-width:100%;
-    height:auto;
-}
-
-#project{
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+    padding:0.5em;
+    background-color:#ffffff;
+    border:1px solid #000000;
+ }
 
 
 /* ==========================================================================
@@ -275,6 +293,106 @@ header {
 
 .clearfix:after {
     clear: both;
+}
+
+/*
+ * This grid system uses the zero-width font https://github.com/patrickkunka/zero-width
+ * to remove white space between inline blocks
+ */
+.grid {
+    font-family: 'zero-width';
+    font-size: 0;
+    
+    max-width: 960px; /* change to suit */
+    margin: 0 auto; /* to center grid */
+}
+.grid > * {
+    font-family: 'helvetica', sans-serif; /* whatever font you want */
+    /* 
+     * if you are using a different base font-size then change this to be the same
+     * if you don't care about ie8 you can change this to
+     */
+    font-size: 16px; 
+}
+.full-width,
+.one-half,
+.one-quarter,
+.two-quarters,
+.three-quarters,
+.one-third,
+.two-thirds,
+.one-fifth,
+.two-fifths,
+.three-fifths,
+.four-fifths,
+.one-twelth,
+.two-twelths,
+.three-twelths,
+.four-twelths,
+.five-twelths,
+.six-twelths,
+.seven-twelths,
+.eight-twelths,
+.nine-twelths,
+.ten-twelths,
+.eleven-twelths {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+}
+.full-width {
+    display: block;
+}
+.one-twelth {
+    width: 8.33333%;
+}
+.two-twelths {
+    width: 16.66667%;
+}
+.one-fifth {
+    width: 20%;
+}
+.one-quarter,
+.three-twelths {
+    width: 25%;
+}
+.one-third,
+.four-twelths {
+    width: 33.33333%;
+}
+.two-fifths {
+    width: 40%;
+}
+.five-twelths {
+    width: 41.66667%;
+}
+.one-half,
+.two-quarters,
+.six-twelths {
+    width: 50%;
+}
+.seven-twelths {
+    width: 58.33333%;
+}
+.three-fifths {
+    width: 60%;
+}
+.two-thirds,
+.eight-twelths {
+    width: 66.66667%;
+}
+.three-quarters,
+.nine-twelths {
+    width: 75%;
+}
+.four-fifths {
+    width: 80%;
+}
+.ten-twelths {
+    width: 83.33333%;
+}
+.eleven-twelths {
+    width: 91.66667%;
 }
 
 /* ==========================================================================
