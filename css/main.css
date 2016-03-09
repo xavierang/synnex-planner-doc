@@ -108,7 +108,8 @@ html{
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center center;*/
+    background-position: center center;
+    color:#ffffff;*/
 }
 
 body{
@@ -210,6 +211,11 @@ a { text-decoration: none; }
     display:inline-block;
     padding-left:2em;
     float:right;
+    cursor: pointer;
+ }
+
+ #team-nav li:hover{
+    color:red;
  }
 
  .members {
@@ -218,6 +224,10 @@ a { text-decoration: none; }
     padding:0.5em;
     background-color:#ffffff;
     border:1px solid #000000;
+ }
+
+ .members:hover{
+    background-color:red;
  }
 
 
