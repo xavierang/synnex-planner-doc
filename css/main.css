@@ -358,7 +358,7 @@ h2 { font-size:2em;}
     font-family: 'zero-width';
     font-size: 0;
     
-    max-width: 960px; /* change to suit */
+    max-width: 1140px; /* change to suit */
     margin: 0 auto; /* to center grid */
 }
 .grid > * {
