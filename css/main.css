@@ -117,7 +117,10 @@ body{
     margin:0 auto;
 }
 
-ul,ol{ padding:0; }
+ul,ol{ 
+    padding:0;
+    margin:0;
+}
 
 li {
     list-style-type: none;
@@ -126,7 +129,16 @@ li {
 
 a { text-decoration: none; }
 
-h2 { font-size:2em;}
+.content h1,
+.content h2,
+.content h3,
+.content h4{margin:0;}
+
+.content p{margin:1em 0 1em 0;}
+
+.content h2 { 
+    font-size:2em;
+}
 
 #about-us h2,
 #teams h2,
@@ -137,10 +149,7 @@ h2 { font-size:2em;}
 
 .content{
     height:100vh;
-}
-
-.content{
-    overflow:auto;
+    overflow-y:scroll;
 }
 
 /*
@@ -148,7 +157,6 @@ h2 { font-size:2em;}
  */
 
 #sidebar-nav {
-    vertical-align: center;
     height:100vh;
     padding:1em;
     border:1px solid #ffffff;
@@ -260,7 +268,6 @@ h2 { font-size:2em;}
 }
 
 #brands h3{
-    padding:0 1em 0 1em;
     background-color:rgba(0,0,0,0.75);
     cursor:pointer;
 }
@@ -270,12 +277,22 @@ h2 { font-size:2em;}
     text-align:center;
 }
 
+.accordion-section{
+    text-align:center; 
+    margin-top:1em;
+}
 .accordion-content{
     background-color:rgba(0,0,0,0.75);
 }
 
+.accordion-content {
+    font-size:0.8em;
+    margin-bottom:1em;
+}
+
 .accordion-content a {
     color:#ffffff;
+    text-decoration: underline;
 }
  
 
