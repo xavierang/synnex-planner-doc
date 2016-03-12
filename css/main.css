@@ -135,22 +135,27 @@ h2 { font-size:2em;}
     background-color:rgba(0,0,0,0.75);
 }
 
+.content{
+    height:100vh;
+}
+
+.content{
+    overflow:auto;
+}
+
 /*
  * Section: Header
  */
 
 #sidebar-nav {
-    width:18%;
-    position:fixed;
-    height:90vh;
-    top:5vh;
+    vertical-align: center;
+    height:100vh;
     padding:1em;
     border:1px solid #ffffff;
     background-color:rgba(0,0,0,0.75);
 }
 
 #sidebar-nav img[alt="synnex logo"]{
-    margin-top:20%;
     padding:1em;
     max-width:100%;
     height:auto;
@@ -164,8 +169,8 @@ h2 { font-size:2em;}
 }
 
 #sidebar-nav ul{
-    margin-top:40%;
-    margin-bottom:40%;
+    margin-top:20%;
+    margin-bottom:20%;
 }
 
 #sidebar-nav a{
@@ -357,9 +362,14 @@ h2 { font-size:2em;}
 .grid {
     font-family: 'zero-width';
     font-size: 0;
-    
+    position:relative;
     max-width: 1140px; /* change to suit */
     margin: 0 auto; /* to center grid */
+}
+.grid:after{
+    content:"";
+    display:table;
+    clear:both;
 }
 .grid > * {
     font-family: 'helvetica', sans-serif; /* whatever font you want */
