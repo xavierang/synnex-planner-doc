@@ -2,6 +2,11 @@ $(document).ready(function(){
 	$('#team-nav ul li').click(function(){
 		var memberType = $(this).html();
 		switch (memberType) {
+			case ('All'):
+				$('div.planners').removeClass('hidden');
+				$('div.managers').removeClass('hidden');
+				$('div.directors').removeClass('hidden');
+				break;
 			case ('Directors'):
 				$('div.planners').addClass('hidden');
 				$('div.managers').addClass('hidden');
@@ -19,5 +24,13 @@ $(document).ready(function(){
 				break;
 			default:
 		}
+	});
+
+	$('#brands img').click(function(){
+		$(this).next().toggleClass('hidden');	
+	});
+
+	$('#brands h3').click(function(){
+		$(this).next().toggleClass('hidden');
 	});
 });
