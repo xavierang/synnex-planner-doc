@@ -225,12 +225,12 @@ a { text-decoration: none; }
  * Section: About Us
  */
 
-
 /*
  * Section: Team Members
  */
 
 #team-nav ul {
+    margin-top:0.5em;
     background-color:rgba(0,0,0,0.75);
 }
 
@@ -270,6 +270,10 @@ a { text-decoration: none; }
 #brands h3{
     background-color:rgba(0,0,0,0.75);
     cursor:pointer;
+}
+
+#brands h3:hover{
+    color:red;
 }
 
 #brands h4{ 
@@ -483,8 +487,39 @@ a { text-decoration: none; }
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 900px) {
+    .full-width-md,
+    .one-third-md{
+        display:inline-block;
+        vertical-align: top;
+        padding:10px;
+    }
+
+    .full-width-md{
+        width:100%;
+    }
+
+    .one-third-md{
+        width:33.33333%;
+    }
     /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (max-width:650px){
+    .full-width-sm{
+        display:inline-block;
+        vertical-align:top;
+        padding:10px;
+    }
+
+    .full-width-sm{
+        width:100%;
+    }
+
+    #sidebar-nav{
+        position:fixed;
+        left:-100%;
+    }
 }
 
 @media print,
