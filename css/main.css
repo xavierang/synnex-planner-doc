@@ -141,6 +141,7 @@ a { text-decoration: none; }
 }
 
 #about-us h2,
+#teams h2,
 #brands h2,
 #contact-us h2 { 
     background-color:rgba(0,0,0,0.75);
@@ -154,12 +155,12 @@ a { text-decoration: none; }
 /*
  * Section: header;
  */
-#header-nav {
+
+.header-nav{
     width:100%;
     height:40px;
     position:fixed;
     left:-100%;
-
     border:1px solid #ffffff;
     background-color:rgba(0,0,0,1);
     z-index: 999;
@@ -177,18 +178,23 @@ a { text-decoration: none; }
     display:none;
 }
 
-#header-nav img{
+.header-nav img[alt="synnex logo"]{
     height:40px;
     width:auto;
     float:left;
 }
 
-#header-nav ul{
+.banner img[alt="synnex bg"]{
+    max-width:100%;
+    height:auto;
+}
+
+.header-nav ul{
     float:right;
     display:inline-block;
 }
 
-#header-nav li{
+.header-nav li{
     height:40px;
     line-height:40px;
     font-size:0.75em;
@@ -227,13 +233,13 @@ a { text-decoration: none; }
 }
 
 #sidebar-nav a,
-#header-nav a{
+.header-nav a{
     font-size:1.2em;
     color:#ffffff;
 }
 
 #sidebar-nav a:hover,
-#header-nav a:hover{
+.header-nav a:hover{
     color:red;
 }
 
@@ -283,16 +289,18 @@ a { text-decoration: none; }
 
 #team-nav h2 {
     width:20%;
-    display:inline-block;
+    display:inline;
     float:left;
 }
 
 #team-nav ul {
+    padding:0;
     display:inline-block;
     float:right;
 }
 
 #team-nav li{
+    font-size:1em;
     line-height:44px;
     height:44px;
     margin-left:2em;
@@ -588,9 +596,11 @@ a { text-decoration: none; }
         width:100%;
     }
 
-    /*adjust margin for each section to account for 
-      the fixed header navbar when it kicks in */
-    #header-nav {
+    #introduction{
+        display:none;
+    }
+
+    .header-nav {
         left:0;
     }
 
@@ -609,8 +619,23 @@ a { text-decoration: none; }
 }
 
 @media only screen and (max-width:500px){
-    #header-nav ul{
+    .one-half-sm{
+        display:inline-block;
+        vertical-align: top;
+        padding:10px;
+    }
+
+    .one-half-sm{
+        width:50%;
+    }
+
+    .header-nav ul{
         display: none;
+    }
+
+    #team-nav li{
+        margin-left:1em;
+        font-size:0.8em;
     }
 
     .hamburger{
