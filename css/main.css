@@ -141,7 +141,6 @@ a { text-decoration: none; }
 }
 
 #about-us h2,
-#teams h2,
 #brands h2,
 #contact-us h2 { 
     background-color:rgba(0,0,0,0.75);
@@ -153,7 +152,53 @@ a { text-decoration: none; }
 }
 
 /*
- * Section: Header
+ * Section: header;
+ */
+#header-nav {
+    width:100%;
+    height:40px;
+    position:fixed;
+    left:-100%;
+
+    border:1px solid #ffffff;
+    background-color:rgba(0,0,0,1);
+    z-index: 999;
+}
+
+.hamburger{
+    float:right;
+    margin-right:1em;
+    padding:0;
+    background:none;
+    border:0;
+    font-size:1.5em;
+    height: 40px;
+
+    display:none;
+}
+
+#header-nav img{
+    height:40px;
+    width:auto;
+    float:left;
+}
+
+#header-nav ul{
+    float:right;
+    display:inline-block;
+}
+
+#header-nav li{
+    height:40px;
+    line-height:40px;
+    font-size:0.75em;
+    margin-left:1em;
+    float:left;
+}
+
+
+/*
+ * Section: sidebar-nav
  */
 
 #sidebar-nav {
@@ -172,7 +217,7 @@ a { text-decoration: none; }
 
 #sidebar-nav p{
     text-align: center;
-    font-size:0.6rem;
+    font-size:0.6em;
     color:#ffffff;
 }
 
@@ -181,12 +226,14 @@ a { text-decoration: none; }
     margin-bottom:20%;
 }
 
-#sidebar-nav a{
+#sidebar-nav a,
+#header-nav a{
     font-size:1.2em;
     color:#ffffff;
 }
 
-#sidebar-nav a:hover{
+#sidebar-nav a:hover,
+#header-nav a:hover{
     color:red;
 }
 
@@ -229,15 +276,27 @@ a { text-decoration: none; }
  * Section: Team Members
  */
 
-#team-nav ul {
-    margin-top:0.5em;
+#team-nav{
+    padding:0;
     background-color:rgba(0,0,0,0.75);
 }
 
-#team-nav li{
+#team-nav h2 {
+    width:20%;
     display:inline-block;
-    margin-left:2em;
+    float:left;
+}
+
+#team-nav ul {
+    display:inline-block;
     float:right;
+}
+
+#team-nav li{
+    line-height:44px;
+    height:44px;
+    margin-left:2em;
+    float:left;
     cursor: pointer;
 }
 
@@ -502,7 +561,20 @@ a { text-decoration: none; }
     .one-third-md{
         width:33.33333%;
     }
-    /* Style adjustments for viewports that meet the condition */
+    
+    #sidebar-nav a{
+        font-size:1em;
+    }
+
+    .content h2{
+        font-size:1.5em;
+    }
+
+    #team-nav li{
+        line-height:33px;
+        height:33px;
+        margin-left:1.5em;
+    }
 }
 
 @media only screen and (max-width:650px){
@@ -516,9 +588,33 @@ a { text-decoration: none; }
         width:100%;
     }
 
+    /*adjust margin for each section to account for 
+      the fixed header navbar when it kicks in */
+    #header-nav {
+        left:0;
+    }
+
+    #introduction,
+    #about-us,
+    #teams,
+    #brands,
+    #contact-us{
+        padding-top:40px;
+    }
+
     #sidebar-nav{
         position:fixed;
         left:-100%;
+    }
+}
+
+@media only screen and (max-width:500px){
+    #header-nav ul{
+        display: none;
+    }
+
+    .hamburger{
+        display:inline-block;
     }
 }
 

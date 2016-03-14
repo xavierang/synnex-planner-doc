@@ -26,6 +26,10 @@ $(document).ready(function(){
 		}
 	});
 
+	$('.hamburger').click(function(){
+		
+	});
+	
 	$('#brands img').click(function(){
 		$(this).next().toggleClass('hidden');	
 	});
