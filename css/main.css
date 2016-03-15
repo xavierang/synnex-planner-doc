@@ -149,6 +149,7 @@ a { text-decoration: none; }
 .content{
     height:100vh;
     overflow-y:scroll;
+    -webkit-overflow-scrolling:touch;
 }
 
 /*
