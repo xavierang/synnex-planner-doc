@@ -30,6 +30,19 @@ $(document).ready(function(){
 		
 	});
 
+	$('.read-btn').click(function(){
+		$('.read-more-text').css('display','inline');
+		$('.read-btn').addClass("hidden");
+		/*var status = $('.read-btn').text();
+		if(status=="Read more >>"){
+			$('.read-more-text').css('display','inline');
+			$('.read-btn').html('<< Read less');
+		} else if (status=="<< Read less"){
+			$('.read-more-text').css('display','none');
+			$('.read-btn').html('Read more >>');
+		} */
+	});
+
 	$('.members').click(function(){
 		$(this).next().toggleClass('hidden');
 	});
