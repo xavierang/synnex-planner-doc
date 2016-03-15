@@ -249,7 +249,7 @@ a { text-decoration: none; }
 .social-media-icons img{
     width:20%;
     height:auto;
-    background-color:white;
+    background-color:#ffffff;
     padding:0;
     border:1px solid #ffffff;
     border-radius:5em;
@@ -311,6 +311,12 @@ a { text-decoration: none; }
     color:red;
 }
 
+.directors,
+.managers,
+.planners{
+    position:relative;
+}
+
 .members {
     cursor:pointer;
     max-width:100%;
@@ -322,6 +328,26 @@ a { text-decoration: none; }
 .members:hover{
     background-color:red;
 }
+
+.members-detail{
+    position:absolute;  
+    z-index:900;
+    left:20px;
+    bottom:20px;
+}
+
+.members-detail img{
+    height:30px;
+    width:30px;
+    background-color:#ffffff;
+    border:1px solid #ffffff;
+    border-radius:5em;
+}
+
+.members-detail img:hover{
+    background-color:red;
+}
+
 
 /*
  * Section: Brands
@@ -340,6 +366,11 @@ a { text-decoration: none; }
 
 #brands h3:hover{
     color:red;
+}
+
+#brands img{
+    padding:0.5em;
+    background-color:#ffffff;
 }
 
 #brands h4{ 
@@ -553,7 +584,7 @@ a { text-decoration: none; }
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 850px) {
     .full-width-md,
     .one-third-md{
         display:inline-block;

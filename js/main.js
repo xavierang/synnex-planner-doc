@@ -29,6 +29,10 @@ $(document).ready(function(){
 	$('.hamburger').click(function(){
 		
 	});
+
+	$('.members').click(function(){
+		$(this).next().toggleClass('hidden');
+	});
 	
 	$('#brands img').click(function(){
 		$(this).next().toggleClass('hidden');	
