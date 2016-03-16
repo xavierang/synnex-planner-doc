@@ -192,17 +192,44 @@ a { text-decoration: none; }
     height:auto;
 }
 
-.header-nav ul{
+ul#inline-nav{
     float:right;
     display:inline-block;
 }
 
-.header-nav li{
+#inline-nav li{
     height:40px;
     line-height:40px;
     font-size:0.75em;
     margin-left:1em;
     float:left;
+}
+
+ul#dropdown-nav{
+    margin-top:40px;
+    width:100%;
+    display:block;
+    background-color:black;
+
+    transition: all 5s;
+}
+
+#dropdown-nav a{
+    color:#ffffff;
+}
+
+#dropdown-nav li{
+    display:block;
+    border:1px solid #ffffff;
+}
+
+#dropdown-nav li:hover{
+    background-color:red;
+}
+
+
+.toggle{
+    display:block;
 }
 
 
@@ -417,13 +444,13 @@ a { text-decoration: none; }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 /*
  * Hide visually and from screen readers
  */
 
 .hidden {
     display: none !important;
+    opacity:0;
 }
 
 /*
@@ -663,7 +690,7 @@ a { text-decoration: none; }
     }
 
     .read-more-text{
-        display:none;
+        display: none;
     }
 
     .read-btn{
@@ -682,7 +709,7 @@ a { text-decoration: none; }
         width:50%;
     }
 
-    .header-nav ul{
+    ul#inline-nav{
         display: none;
     }
 
