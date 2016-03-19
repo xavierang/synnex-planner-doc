@@ -210,8 +210,6 @@ ul#dropdown-nav{
     width:100%;
     display:block;
     background-color:black;
-
-    transition: all 5s;
 }
 
 #dropdown-nav a{
@@ -450,7 +448,6 @@ ul#dropdown-nav{
 
 .hidden {
     display: none !important;
-    opacity:0;
 }
 
 /*

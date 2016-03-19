@@ -30,6 +30,10 @@ $(document).ready(function(){
 		$('#dropdown-nav').toggleClass("hidden");
 	});
 
+	$('#dropdown-nav a').click(function(){
+		$('#dropdown-nav').addClass("hidden");
+	});
+
 	$('.read-btn').click(function(){
 		$('.read-more-text').css('display','inline');
 		$('.read-btn').addClass("hidden");
