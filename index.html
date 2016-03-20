@@ -86,11 +86,11 @@
 
                 <section id="teams">
                     <div class="grid">
-                        <div id="team-nav" class="full-width clearfix">
+                        <div class="full-width clearfix">
                             <h2>Teams</h2>
-                            <nav>
+                            <nav id="team-nav" class="clearfix">
                                 <ul>
-                                    <li>All</li>
+                                    <li class="content-active">All</li>
                                     <li>Directors</li>
                                     <li>Product Managers</li>
                                     <li>Planners</li>
@@ -379,15 +379,95 @@
                     <div class="grid">
                         <div class="full-width clearfix">
                             <h2>Contact Us</h2>
-                            <nav>
+                            <nav id="contact-nav" class="clearfix">
                                 <ul>
-                                    <li>Contact List</li>
+                                    <li class="content-active">Contact List</li>
                                     <li>Contact Us</li>
                                 </ul>
                             </nav> 
-                            
-                            <div class="contact one-third">
-                                
+
+                            <div id="contact-list-content" class="contact-onscreen">
+                                <div class="grid">
+                                    <div class="contact one-third one-half-md">
+                                        <h3>Melbourne (HQ)</h3>
+                                        <p>92 Carroll Road, Oakleigh South VIC 3167</p>
+                                        <p class="phone">03 8540 8888</p>
+                                        <p class="fax">03 8540 8800</p>
+                                    </div>
+
+                                    <div class="contact one-third one-half-md">
+                                        <h3>Sydney</h3>
+                                        <p>14 Parramatta Road (entrance via Birnie Ave), Lodcombe NSW 2141</p>
+                                        <p class="phone">02 8756 8888</p>
+                                        <p class="fax">02 8756 2800</p>
+                                    </div>
+
+                                    <div class="contact one-third one-half-md">
+                                        <h3>Brisbane</h3>
+                                        <p>57 Luke Street, Lytton QLD 4178</p>
+                                        <p class="phone">07 3909 6288</p>
+                                        <p class="fax">07 3909 6200</p>
+                                    </div>
+
+                                    <div class="contact one-third one-half-md">
+                                        <h3>Perth</h3>
+                                        <p>13 Vale Street, Malaga WA 6090</p>
+                                        <p class="phone">08 9205 5788</p>
+                                        <p class="fax">08 9205 5700</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="contact-us-content" class="contact-offscreen">
+                                <div class="grid">
+                                    <form class="full-width clearfix" action="#" method="post">
+                                        <fieldset>
+                                            <legend class="one">Select Department</legend>
+                                            <div class="grid">
+                                                <label class="one-third one-half-sm" for="department">Department:</label>
+                                                <select class="two-thirds one-half-sm" id="department" name="department"> 
+                                                    <option selected="default">Select Department</option>
+                                                    <option value="pmm">Product Management</option>
+                                                    <option value="finance">Finance</option>
+                                                    <option value="sales">Sales</option>
+                                                    <option value="other">Others</option>
+                                                </select>
+                                            </div>
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <legend class="two">Enter Contact Details</legend>
+                                            <div class="grid">
+                                                <label class="one-third one-half-sm" for="custcode">Customer Code:</label>
+                                                <input class="two-thirds one-half-sm" type="text" id="custcode" name="code" placeholder="Enter Customer Code">
+                                            </div>
+
+                                            <div class="grid">
+                                                <label class="one-third one-half-sm" for="custname">Customer Name:</label>
+                                                <input class="two-thirds one-half-sm" type="text" id="custname" name="name" placeholder="Enter Customer Name">
+                                            </div>
+
+                                            <div class="grid">
+                                                <label class="one-third one-half-sm" for="custemail">Email Address:</label>
+                                                <input class="two-thirds one-half-sm" type="email" id="custemail" name="email" placeholder="Enter Customer Email">
+                                            </div>
+
+                                            <div class="grid">
+                                                <label class="one-third one-half-sm" for="custcontact">Phone Number:</label>
+                                                <input class="two-thirds one-half-sm" type="text" id="custcontact" name="contact" placeholder="Enter Phone Number">
+                                            </div>
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <legend class="three">Enter Your Message</legend>
+                                            <div class="grid">
+                                                <textarea class="full-width" id="message" name="message" placeholder="Enter Your Message"></textarea>
+                                            </div>
+                                        </fieldset>
+
+                                        <input type="submit" value="Submit">
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

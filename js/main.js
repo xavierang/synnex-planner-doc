@@ -34,16 +34,14 @@ $(document).ready(function(){
 		$('#dropdown-nav').addClass("hidden");
 	});
 
-	/*$('#sidebar-nav img').hover(function(){
-			$(this).attr('src','img/synnex-logo.png');
-		}, function(){
-			$(this).attr('src','img/synnex-logo-grayscale.png');
-		}
-	);*/
-
 	$('.read-btn').click(function(){
 		$('.read-more-text').css('display','inline');
 		$('.read-btn').addClass("hidden");
+	});
+
+	$('#team-nav li').click(function(){
+		$('#team-nav li').removeClass('content-active');
+		$(this).addClass('content-active');
 	});
 
 	$('.members').click(function(){
@@ -80,4 +78,20 @@ $(document).ready(function(){
 		$(this).next().toggleClass('hidden');
 		$(this).toggleClass('accordion-active');
 	});
+
+	$('#contact-nav li').click(function(){
+		$('#contact-nav li').removeClass('content-active');
+		$(this).addClass('content-active');
+
+		var temp = $(this).html();
+		if(temp=="Contact List"){
+			$('#contact-list-content').attr('class','contact-onscreen');
+			$('#contact-us-content').attr('class','contact-offscreen');
+		}else if(temp=="Contact Us"){
+			$('#contact-list-content').attr('class','contact-offscreen');
+			$('#contact-us-content').attr('class','contact-onscreen');
+		}
+	});
+
+	
 });
