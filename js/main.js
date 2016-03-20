@@ -95,6 +95,45 @@ $(document).ready(function(){
 
 	$('input[type="submit"]').click(function(event){
 		event.preventDefault();
+		var code = $('#custcode').val();
+		var name = $('#custname').val();
+		var email = $('#custemail').val();
+		var phone = $('#custphone').val();
+		var message = $('#message').val();
+		var error = false ;
+
+		//check
+		if(code==""){
+			error=true;
+			$('.message').text('Please insert Customer Code').addClass("warning").fadeIn().delay(1000).fadeOut();
+		} else if (name==""){
+			error=true;
+			$('.message').text('Please insert Customer Name').addClass("warning").fadeIn().delay(1000).fadeOut();
+		} else if (email==""){
+			error=true;
+			$('.message').text('Please insert Email Address').addClass("warning").fadeIn().delay(1000).fadeOut();
+		} else if (phone==""){
+			error=true;
+			$('.message').text('Please insert Phone Number').addClass("warning").fadeIn().delay(1000).fadeOut();
+		} else if (message==""){
+			error=true;
+			$('.message').text('Please insert a message').addClass("warning").fadeIn().delay(1000).fadeOut();
+		} else if (!$.isNumeric(phone)){
+			error=true;
+			$('.message').text('Invalid phone number').addClass("warning").fadeIn().delay(1000).fadeOut();
+		}
+
+		if(error==false){
+			//form successfully submitted
+			$('.message').text('Form has been successfully submitted').addClass("success").fadeIn().delay(1000).fadeOut();
+
+			//clear all input
+			$('#custcode').val("");
+			$('#custname').val("");
+			$('#custemail').val("");
+			$('#custphone').val("");
+			$('#message').val("");
+		}
 		
 	});
 });
