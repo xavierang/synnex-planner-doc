@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600,700);
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
@@ -104,6 +105,7 @@ textarea {
 
 html{
     font-size:16px;
+    font-family:'Josefin Sans',sans-serif;
     background:linear-gradient(
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
@@ -132,34 +134,44 @@ li {
 
 a { text-decoration: none; }
 
-.content h1,
-.content h2,
-.content h3,
-.content h4{margin:0;}
-
-.content p{margin:1em 0 1em 0;}
-
-.content h2 { 
-    font-size:2em;
-}
-
-#about-us h2,
-#brands h2,
-#contact-us h2 { 
-    /*background-color:rgba(0,0,0,0.75);*/
-}
-
 .content{
     height:100vh;
     overflow-y:scroll;
     -webkit-overflow-scrolling:touch;
 }
 
+.content h2{
+    font-size:2em;
+    font-weight:700;
+    margin:0;
+}
+
+.content h3{
+    font-size:1.5em;
+    font-weight:600;
+    margin:0;
+}
+
+.content h4{
+    font-size:1.3em;
+    font-weight:400;
+    margin:0;
+}
+
+.read-btn,
+.content p,li,a{
+    font-size:1.1em;
+    font-weight:300;
+    margin:0;
+}
+
+
 /*
  * Section: header;
  */
 
 .header-nav{
+    top:0;
     width:100%;
     height:40px;
     position:fixed;
@@ -213,23 +225,21 @@ ul#dropdown-nav{
 }
 
 #dropdown-nav a{
-    color:#ffffff;
-}
-
-#dropdown-nav li{
     display:block;
     border:1px solid #ffffff;
+    color:#ffffff;
+
+    transition:all 0.75s;
 }
 
-#dropdown-nav li:hover{
-    background-color:red;
+#dropdown-nav a:hover{
+    background-color:#ffffff;
+    color:#000000;
 }
-
 
 .toggle{
     display:block;
 }
-
 
 /*
  * Section: sidebar-nav
@@ -251,7 +261,8 @@ ul#dropdown-nav{
 
 #sidebar-nav p{
     text-align: center;
-    font-size:0.6em;
+    font-weight:300;
+    font-size:0.75em;
     color:#ffffff;
 }
 
@@ -260,15 +271,20 @@ ul#dropdown-nav{
     margin-bottom:20%;
 }
 
-#sidebar-nav a,
-.header-nav a{
-    font-size:1.2em;
+#sidebar-nav ul a,
+#inline-nav a{
+    font-size:1.35em;
+    font-weight:400;
     color:#ffffff;
+    border:1px solid #ffffff;
+
+    transition:all 0.75s;
 }
 
-#sidebar-nav a:hover,
-.header-nav a:hover{
-    color:red;
+#sidebar-nav ul a:hover,
+#inline-nav a:hover{
+    color:#000000;
+    background-color:#ffffff;
 }
 
 .social-media-icons{
@@ -282,12 +298,25 @@ ul#dropdown-nav{
     padding:0;
     border:1px solid #ffffff;
     border-radius:5em;
+
+    transition:background 0.75s;
 }
 
-.social-media-icons img:hover{
-    background-color:red;
+.social-media-icons img[alt="facebook-icon"]:hover{
+    background-color:rgb(168,177,183);
 }
 
+.social-media-icons img[alt="linkedin-icon"]:hover{
+    background-color:rgb(239,58,50);
+}
+
+.social-media-icons img[alt="twitter-icon"]:hover{
+    background-color:rgb(0,163,180);
+}
+
+.social-media-icons img[alt="home-icon"]:hover{
+    background-color:rgb(0,107,183);
+}
 /*
  * Section: Introduction
  */
@@ -299,7 +328,6 @@ ul#dropdown-nav{
 .intro-syd{
     border-left:1px solid #ffffff;
     padding-left:1em;
-    font-size:0.9em;
 }
 
 /*
@@ -307,6 +335,7 @@ ul#dropdown-nav{
  */
 
  .read-btn{
+    font-size:1.1em;
     background:none;
     border:0;
     display:none;
@@ -323,32 +352,38 @@ ul#dropdown-nav{
 
 #team-nav{
     padding:0;
-    /*background-color:rgba(0,0,0,0.75);*/
 }
 
-#team-nav h2 {
+#team-nav h2{
     width:20%;
     display:inline;
     float:left;
 }
 
-#team-nav ul {
+#team-nav ul,
+#contact-us ul{
     padding:0;
     display:inline-block;
     float:right;
 }
 
-#team-nav li{
-    font-size:1em;
+#team-nav li,
+#contact-us li{
+    padding-left:0.5em;
+    padding-right:0.5em;
     line-height:44px;
     height:44px;
-    margin-left:2em;
     float:left;
     cursor: pointer;
+    border:1px solid #ffffff;
+
+    transition:all 0.75s;
 }
 
-#team-nav li:hover{
-    color:red;
+#team-nav li:hover,
+#contact-us li:hover{
+    color:#000000;
+    background-color:#ffffff;
 }
 
 .directors,
@@ -362,11 +397,17 @@ ul#dropdown-nav{
     max-width:100%;
     height:auto;
     padding:0.5em;
-    background-color:#ffffff;
+    border:1px solid #ffffff;
+
+    transition:background 0.75s;
 }
 
 .members:hover{
-    background-color:red;
+    background-color:#ffffff;
+}
+
+.members-active{
+    background-color:#ffffff;
 }
 
 .members-detail{
@@ -382,12 +423,13 @@ ul#dropdown-nav{
     background-color:#ffffff;
     border:1px solid #ffffff;
     border-radius:5em;
+
+    transition: background 0.75s;
 }
 
 .members-detail img:hover{
     background-color:red;
 }
-
 
 /*
  * Section: Brands
@@ -400,16 +442,30 @@ ul#dropdown-nav{
 }
 
 #brands h3{
-    /*background-color:rgba(0,0,0,0.75);*/
     cursor:pointer;
+    border:1px solid #ffffff;
+
+    transition:all 0.75s;
 }
 
 #brands h3:hover{
-    color:red;
+    color:#000000;
+    background-color:#ffffff;
 }
+
 
 #brands img{
     padding:0.5em;
+    border:1px solid #ffffff;
+
+    transition:background 0.75s;
+}
+
+#brands img:hover{
+    background-color:#ffffff;
+}
+
+.brands-active{
     background-color:#ffffff;
 }
 
@@ -423,11 +479,10 @@ ul#dropdown-nav{
     margin-top:1em;
 }
 .accordion-content{
-    /*background-color:rgba(0,0,0,0.75);*/
+    border:1px solid #ffffff;
 }
 
 .accordion-content {
-    font-size:0.8em;
     margin-bottom:1em;
 }
 
@@ -435,7 +490,52 @@ ul#dropdown-nav{
     color:#ffffff;
     text-decoration: underline;
 }
- 
+
+.accordion-active {
+    color:#000000;
+    background-color:#ffffff;
+}
+
+/*
+ * Contact Us
+ */
+
+#contact-us h2{
+    width:40%;
+    display:inline;
+    float:left;
+}
+
+/*
+ * Footer
+ */
+footer{
+    width:100%;
+    height:40px;
+    position:fixed;
+    bottom:0;
+    left:-100%;
+    border:1px solid #ffffff;
+    background-color:rgba(0,0,0,1);
+}
+
+footer p{
+    margin-left:1em;
+    display:inline-block;
+}
+
+footer .social-media-icons {
+    float:right;
+    display:inline-block;
+}
+
+footer .social-media-icons img{
+    margin-top:5px;
+    margin-right:0.5em;
+    float:left;
+    height:30px;
+    width:auto;
+}
 
 
 
@@ -529,7 +629,7 @@ ul#dropdown-nav{
     clear:both;
 }
 .grid > * {
-    font-family: 'helvetica', sans-serif; /* whatever font you want */
+    font-family: 'Josefin Sans', sans-serif; /* whatever font you want */
     /* 
      * if you are using a different base font-size then change this to be the same
      * if you don't care about ie8 you can change this to
@@ -638,19 +738,22 @@ ul#dropdown-nav{
     .one-third-md{
         width:33.33333%;
     }
-    
-    #sidebar-nav a{
-        font-size:1em;
-    }
 
     .content h2{
         font-size:1.5em;
     }
 
-    #team-nav li{
-        line-height:33px;
-        height:33px;
-        margin-left:1.5em;
+    .content h3{
+        font-size:1.3em;
+    }
+
+    .content h4{
+        font-size:1.1em;
+    }
+
+    .read-btn,
+    .content p,li,a{
+        font-size:1em;
     }
 }
 
@@ -673,6 +776,10 @@ ul#dropdown-nav{
         left:0;
     }
 
+    footer{
+        left:0;
+    }
+
     #introduction,
     #about-us,
     #teams,
@@ -681,9 +788,13 @@ ul#dropdown-nav{
         padding-top:40px;
     }
 
+    #contact-us{
+        padding-bottom:40px;
+    }
+
     #sidebar-nav{
         position:fixed;
-        left:-100%;
+        left:-200%;
     }
 
     .read-more-text{
@@ -710,13 +821,17 @@ ul#dropdown-nav{
         display: none;
     }
 
-    #team-nav li{
-        margin-left:1em;
-        font-size:0.8em;
-    }
-
     .hamburger{
         display:inline-block;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .read-btn,
+    .content p,
+    .content li,
+    .content a{
+        font-size:0.8em;
     }
 
     
