@@ -93,11 +93,8 @@ $(document).ready(function(){
 		}
 	});
 
-	$('form').on('submit',function(e){
-		if(!valid){
-			e.preventDefault();
-		} else{
-			alert("si");
-		}
+	$('input[type="submit"]').click(function(event){
+		event.preventDefault();
+		
 	});
 });
