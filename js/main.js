@@ -93,5 +93,11 @@ $(document).ready(function(){
 		}
 	});
 
-	
+	$('form').on('submit',function(e){
+		if(!valid){
+			e.preventDefault();
+		} else{
+			alert("si");
+		}
+	});
 });

@@ -513,6 +513,10 @@ ul#dropdown-nav{
     float:left;
 }
 
+.phone,
+.fax {
+    text-decoration: none;
+}
 .phone:before{
     content:"P: ";
 }
@@ -524,7 +528,7 @@ ul#dropdown-nav{
 #contact-list-content{
     width:100%;
     position:absolute;
-    margin-bottom:100px;
+    margin-bottom:40px;
 
     transition:right 1s;
 }
@@ -532,7 +536,7 @@ ul#dropdown-nav{
 #contact-us-content{
     width:100%;
     position:absolute;
-    margin-bottom:100px;
+    margin-bottom:40px;
 
     transition:right 1s;
 }
