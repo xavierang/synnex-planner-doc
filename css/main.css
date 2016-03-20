@@ -562,6 +562,7 @@ textarea{
 }
 
 textarea{
+    height:20vh;
     margin-top:1em;
 }
 
